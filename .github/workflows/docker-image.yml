@@ -1,0 +1,19 @@
+name: Docker Image CI misty walker 
+
+on:phone 4042935573
+  push: integrate 
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:ssh7run
+  
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4open
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
